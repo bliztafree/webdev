@@ -6,7 +6,7 @@ version: '3.4'
 # but values present in the environment vars at runtime will always override those defined inside the .env file
 # An external IP or DNS name has to be used when testing the Web apps and the Xamarin apps from remote machines/devices using the same WiFi, for instance.
 #
-# IMPORTANT: Note that this compose file uses ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP instead of ESHOP_EXTERNAL_DNS_NAME_OR_IP
+# IMPORTANT: Note that this compose file uses ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP instead of BLIZTA_XTERNAL_DNS_NAME_OR_IP
 
 # Set ASPNETCORE_ENVIRONMENT= Development or Production, depending if you want to show up errors while testing. 
 #

@@ -1,8 +1,8 @@
 version: '3.4'
 
 # The default docker-compose.override file can use the "localhost" as the external name for testing web apps within the same dev machine. 
-# The ESHOP_EXTERNAL_DNS_NAME_OR_IP environment variable is taken, by default, from the ".env" file defined like: 
-#     ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
+# The BLIZTA_XTERNAL_DNS_NAME_OR_IP environment variable is taken, by default, from the ".env" file defined like: 
+#     BLIZTA_XTERNAL_DNS_NAME_OR_IP=localhost
 # but values present in the environment vars at runtime will always override those defined inside the .env file
 # An external IP or DNS name has to be used (instead localhost and the 10.0.75.1 IP) when testing the Web apps and the Xamarin apps from remote machines/devices using the same WiFi, for instance.
 
@@ -14,7 +14,7 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basket.data}
       - identityUrl=http://identity.api              #Local: You need to open your local dev-machine firewall at range 5100-5110.
-      - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
+      - IdentityUrlExternal=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5105
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
       - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}      
@@ -49,14 +49,14 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - SpaClient=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5104
+      - SpaClient=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5104
       - XamarinCallback=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105/xamarincallback      #localhost do not work for UWP login, so we have to use "external" IP always
       - ConnectionString=${ESHOP_AZURE_IDENTITY_DB:-Server=sql.data;Database=Microsoft.bliztafree.Service.IdentityDb;User Id=sa;Password=Pass@word} 
-      - MvcClient=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5100              #Local: You need to open your local dev-machine firewall at range 5100-5110. 
-      - LocationApiClient=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5109
-      - MarketingApiClient=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5110
-      - BasketApiClient=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5103
-      - OrderingApiClient=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5102
+      - MvcClient=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5100              #Local: You need to open your local dev-machine firewall at range 5100-5110. 
+      - LocationApiClient=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5109
+      - MarketingApiClient=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5110
+      - BasketApiClient=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5103
+      - OrderingApiClient=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5102
       - UseCustomizationData=True  
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
       - OrchestratorType=${ORCHESTRATOR_TYPE}
@@ -69,7 +69,7 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_ORDERING_DB:-Server=sql.data;Database=Microsoft.bliztafree.Services.OrderingDb;User Id=sa;Password=Pass@word}
       - identityUrl=http://identity.api              #Local: You need to open your local dev-machine firewall at range 5100-5110.
-      - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
+      - IdentityUrlExternal=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5105
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
       - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}          
@@ -112,7 +112,7 @@ services:
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
       - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}          
       - identityUrl=http://identity.api              #Local: You need to open your local dev-machine firewall at range 5100-5110.
-      - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
+      - IdentityUrlExternal=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5105
       - CampaignDetailFunctionUri=${ESHOP_AZUREFUNC_CAMPAIGN_DETAILS_URI}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_MARKETING_URL:-http://localhost:5110/api/v1/campaigns/[0]/pic/}
       - AzureStorageAccountName=${ESHOP_AZURE_STORAGE_MARKETING_NAME}
@@ -129,12 +129,12 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - CatalogUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5101
-      - OrderingUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5102
-      - IdentityUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105              #Local: You need to open your local dev-machine firewall at range 5100-5105.  at range 5100-5105. 
-      - BasketUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5103
-      - MarketingUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5110
-      - LocationsUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5109
+      - CatalogUrl=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5101
+      - OrderingUrl=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5102
+      - IdentityUrl=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5105              #Local: You need to open your local dev-machine firewall at range 5100-5105.  at range 5100-5105. 
+      - BasketUrl=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5103
+      - MarketingUrl=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5110
+      - LocationsUrl=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5109
       - CatalogUrlHC=http://catalog.api/hc
       - OrderingUrlHC=http://ordering.api/hc
       - IdentityUrlHC=http://identity.api/hc     #Local: Use ${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}, if using external IP or DNS name from browser.          
@@ -155,7 +155,7 @@ services:
       - OrderingUrl=http://ordering.api
       - BasketUrl=http://basket.api
       - LocationsUrl=http://locations.api
-      - IdentityUrl=http://10.0.75.1:5105  # Local Mac: Use http://docker.for.mac.localhost:5105 || Local Windows:  Use 10.0.75.1 in a "Docker for Windows" environment, if using "localhost" from browser. || #Remote access: Use ${ESHOP_EXTERNAL_DNS_NAME_OR_IP} if using external IP or DNS name from browser.
+      - IdentityUrl=http://10.0.75.1:5105  # Local Mac: Use http://docker.for.mac.localhost:5105 || Local Windows:  Use 10.0.75.1 in a "Docker for Windows" environment, if using "localhost" from browser. || #Remote access: Use ${BLIZTA_XTERNAL_DNS_NAME_OR_IP} if using external IP or DNS name from browser.
       - MarketingUrl=http://marketing.api                                                    
       - CatalogUrlHC=http://catalog.api/hc
       - OrderingUrlHC=http://ordering.api/hc
@@ -208,7 +208,7 @@ services:
       - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
       - Database=LocationsDb
       - identityUrl=http://identity.api              #Local: You need to open your local dev-machine firewall at range 5100-5110. 
-      - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
+      - IdentityUrlExternal=http://${BLIZTA_XTERNAL_DNS_NAME_OR_IP}:5105
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
       - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}          

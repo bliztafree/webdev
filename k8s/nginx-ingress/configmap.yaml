@@ -6,6 +6,6 @@ metadata:
   labels:
     app: ingress-nginx
 data:
-  ssl-redirect: "false"
+  ssl-redirect: "true"
   proxy-buffer-size: "128k"
   proxy-buffers: "4 256k"

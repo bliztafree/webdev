@@ -12,7 +12,7 @@ spec:
       labels:
         app: default-http-backend
     spec:
-      terminationGracePeriodSeconds: 60
+      terminationGracePeriodSeconds: 600
       containers:
       - name: default-http-backend
         # Any image is permissable as long as:

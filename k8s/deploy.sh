@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # http://redsymbol.net/articles/unofficial-bash-strict-mode/
-set -euo pipefail
+# set -euo pipefail
 
 # This script is comparable to the PowerShell script deploy.ps1 but to be used from a Mac bash environment.
 # There are, however, the following few differences/limitations:
@@ -42,7 +42,7 @@ FROM THE CURRENT CONFIGURATION CONTEXT.
 It is recommended that you create a separate namespace and confguration context
 for the bliztafree application, to isolate it from other applications on the cluster.
 For more information see https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
-You can use eshop-namespace.yaml file (in the same directory) to create the namespace.
+You can use bliztafree-namespace.yaml file (in the same directory) to create the namespace.
 
 END
 }
@@ -102,7 +102,7 @@ if [[ $push_images ]]; then
     for service in "${services[@]}"
     do
         echo "Pushing image for service $service..."
-        docker tag "eshop/$service:$image_tag" "$container_registry/$service:$image_tag"
+        docker tag "bliztafree/$service:$image_tag" "$container_registry/$service:$image_tag"
         docker push "$container_registry/$service:$image_tag"
     done
 fi
@@ -116,7 +116,7 @@ kubectl delete configmap externalcfg || true
 
 echo "#################### Deploying infrastructure components ####################"
 kubectl create configmap config-files --from-file=nginx-conf=nginx.conf
-kubectl label configmap config-files app=eshop
+kubectl label configmap config-files app=bliztafree
 kubectl create -f sql-data.yaml -f basket-data.yaml -f keystore-data.yaml -f rabbitmq.yaml -f nosql-data.yaml
 
 echo "#################### Creating application service definitions ####################"
@@ -175,7 +175,7 @@ kubectl create configmap urls \
     "--from-literal=OrderingApiClient=http://$externalDns/ordering-api" \
     "--from-literal=PaymentHealthCheckUrl=http://payment/hc"
 
-kubectl label configmap urls app=eshop
+kubectl label configmap urls app=bliztafree
 
 # externalcfg configmap -- points to local infrastructure components (rabbitmq, SQL Server etc)
 kubectl create -f conf_local.yml

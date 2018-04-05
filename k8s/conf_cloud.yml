@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: externalcfg
   labels:
-    app: eshop  
+    app: bliztafree  
 data:
 # Basket.API entries
   BasketBus: CONNECTION_STRING (NAME OF RABBITMQ CONTAINER OR Endpoint=sb://XXXX for topic in case of using Azure)

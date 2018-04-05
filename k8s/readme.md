@@ -1,6 +1,6 @@
 # Kubernetes (k8s) deploy information
 
-This folder contains files needed to **create** a ACS with Kubernetes in Azure and to **deploy** eShopServices in a existing Kubernetes:
+This folder contains files needed to **create** a ACS with Kubernetes in Azure and to **deploy** bliztafreeServices in a existing Kubernetes:
 
 - `gen-k8s-env.ps1` Script to create a ACS with Kubernetes in Azure
 - `deploy.ps1` Script to deploy bliztafree in a existing k8s

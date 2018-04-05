@@ -15,18 +15,18 @@
     <EntryPoint>
       <!-- Follow this link for more information about deploying Windows containers to Service Fabric: https://aka.ms/sfguestcontainers -->
       <ContainerHost>
-        <ImageName>eshop/locations.api-win:#{tag}#</ImageName>
+        <ImageName>bliztafree/locations.api-win:#{tag}#</ImageName>
       </ContainerHost>
     </EntryPoint>
     <!-- Pass environment variables to your container: -->
     <EnvironmentVariables>
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="Development"/>
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:80"/>
-      <EnvironmentVariable Name="ConnectionString" Value="mongodb://mongodb.eshoponservicefabricnosql"/>
+      <EnvironmentVariable Name="ConnectionString" Value="mongodb://mongodb.bliztafreeonservicefabricnosql"/>
       <EnvironmentVariable Name="Database" Value="LocationsDb"/>
-      <EnvironmentVariable Name="identityUrl" Value="http://identityapi.eshoponservicefabric:5105"/>
+      <EnvironmentVariable Name="identityUrl" Value="http://identityapi.bliztafreeonservicefabric:5105"/>
       <EnvironmentVariable Name="IdentityUrlExternal" Value=""/>
-      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.eshoponservicefabricbus"/>
+      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.bliztafreeonservicefabricbus"/>
       <EnvironmentVariable Name="AzureServiceBusEnabled" Value="False"/>      
       <EnvironmentVariable Name="EventBusUserName" Value="admin"/>
       <EnvironmentVariable Name="EventBusPassword" Value="password"/>
@@ -45,7 +45,7 @@
       <!-- This endpoint is used by the communication listener to obtain the port on which to 
            listen. Please note that if your service is partitioned, this port is shared with 
            replicas of different partitions that are placed in your code. -->
-      <Endpoint Name="LocationsApiTypeEndpoint" Port="5109" PathSuffix="eShopOnServiceFabric/LocationsApi"/>
+      <Endpoint Name="LocationsApiTypeEndpoint" Port="5109" PathSuffix="bliztafreeOnServiceFabric/LocationsApi"/>
     </Endpoints>
   </Resources>
 </ServiceManifest>

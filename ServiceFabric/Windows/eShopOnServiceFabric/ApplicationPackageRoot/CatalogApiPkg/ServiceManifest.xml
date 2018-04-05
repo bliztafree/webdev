@@ -15,20 +15,20 @@
     <EntryPoint>
       <!-- Follow this link for more information about deploying Windows containers to Service Fabric: https://aka.ms/sfguestcontainers -->
       <ContainerHost>
-        <ImageName>eshop/catalog.api-win:#{tag}#</ImageName>
+        <ImageName>bliztafree/catalog.api-win:#{tag}#</ImageName>
       </ContainerHost>
     </EntryPoint>
     <!-- Pass environment variables to your container: -->
     <EnvironmentVariables>
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="Development"/>
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:80"/> 
-      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.eshoponservicefabricsql,5433;Database=Microsoft.bliztafree.Services.CatalogDb;User Id=sa;Password=Pass@word"/>
-      <EnvironmentVariable Name="PicBaseUrl" Value="http://catalogapi.eshoponservicefabric:5101/api/v1/catalog/items/[0]/pic/"/>
+      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.bliztafreeonservicefabricsql,5433;Database=Microsoft.bliztafree.Services.CatalogDb;User Id=sa;Password=Pass@word"/>
+      <EnvironmentVariable Name="PicBaseUrl" Value="http://catalogapi.bliztafreeonservicefabric:5101/api/v1/catalog/items/[0]/pic/"/>
       <EnvironmentVariable Name="AzureStorageAccountName" Value=""/>
       <EnvironmentVariable Name="AzureStorageAccountKey" Value=""/>
       <EnvironmentVariable Name="UseCustomizationData" Value="True"/>
       <EnvironmentVariable Name="AzureStorageEnabled" Value="False"/>
-      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.eshoponservicefabricbus"/>
+      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.bliztafreeonservicefabricbus"/>
       <EnvironmentVariable Name="AzureServiceBusEnabled" Value="False"/>
       <EnvironmentVariable Name="EventBusUserName" Value="admin"/>
       <EnvironmentVariable Name="EventBusPassword" Value="password"/>
@@ -46,7 +46,7 @@
       <!-- This endpoint is used by the communication listener to obtain the port on which to 
            listen. Please note that if your service is partitioned, this port is shared with 
            replicas of different partitions that are placed in your code. -->
-      <Endpoint Name="CatalogApiTypeEndpoint" Port="5101" UriScheme="http" PathSuffix="eShopOnServiceFabric/CatalogApi"/>
+      <Endpoint Name="CatalogApiTypeEndpoint" Port="5101" UriScheme="http" PathSuffix="bliztafreeOnServiceFabric/CatalogApi"/>
     </Endpoints>
   </Resources>
 </ServiceManifest>

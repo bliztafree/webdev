@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "clusterName": {
-            "value": "pro-eshop-sfwin-cluster"
+            "value": "pro-bliztafree-sfwin-cluster"
         },
         "clusterLocation": {
             "value": "westus"
@@ -12,34 +12,34 @@
             "value": "westus"
         },
         "adminUserName": {
-            "value": "eshop"
+            "value": "bliztafree"
         },
         "adminPassword": {
             "value": "Your_complex_Pass@word1"
         },
         "nicName": {
-            "value": "NIC-eshopsfwin"
+            "value": "NIC-bliztafreesfwin"
         },
         "publicIPAddressName": {
-            "value": "eshopsfwin-PubIP"
+            "value": "bliztafreesfwin-PubIP"
         },
         "dnsName": {
-            "value": "pro-eshop-sfwin-cluster"
+            "value": "pro-bliztafree-sfwin-cluster"
         },
         "virtualNetworkName": {
-            "value": "VNet-eshopsfwin"
+            "value": "VNet-bliztafreesfwin"
         },
         "lbName": {
-            "value": "LB-eshopsfwin"
+            "value": "LB-bliztafreesfwin"
         },
         "lbIPName": {
-            "value": "LBIP-eshopsfwin"
+            "value": "LBIP-bliztafreesfwin"
         },
         "applicationDiagnosticsStorageAccountName": {
-            "value": "sfdgqaeshopsfwinsec"
+            "value": "sfdgqabliztafreesfwinsec"
         },
         "supportLogStorageAccountName": {
-            "value": "sflogsqaeshopsfwinsec"
+            "value": "sflogsqabliztafreesfwinsec"
         },
         "sourceVaultValue": {
             "value": "your-value-check-keyvault-at-azure"

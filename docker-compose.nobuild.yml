@@ -2,31 +2,31 @@ version: '3.4'
 
 services:
   basket.api:
-    image: eshop/basket.api
+    image: bliztafree/basket.api
     depends_on:
       - basket.data
       - identity.api
       - rabbitmq
 
   catalog.api:
-    image: eshop/catalog.api
+    image: bliztafree/catalog.api
     depends_on:
       - sql.data
       - rabbitmq
 
   identity.api:
-    image: eshop/identity.api
+    image: bliztafree/identity.api
     depends_on:
       - sql.data
 
   ordering.api:
-    image: eshop/ordering.api
+    image: bliztafree/ordering.api
     depends_on:
       - sql.data
       - rabbitmq
 
   marketing.api:
-    image: eshop/marketing.api   
+    image: bliztafree/marketing.api   
     depends_on:
       - sql.data
       - nosql.data
@@ -34,7 +34,7 @@ services:
       - rabbitmq      
 
   webspa:
-    image: eshop/webspa
+    image: bliztafree/webspa
     depends_on:
       - catalog.api
       - ordering.api
@@ -43,7 +43,7 @@ services:
       - marketing.api
 
   webmvc:
-    image: eshop/webmvc  
+    image: bliztafree/webmvc  
     depends_on:
       - catalog.api
       - ordering.api
@@ -52,15 +52,15 @@ services:
       - marketing.api
 
   webstatus:
-    image: eshop/webstatus
+    image: bliztafree/webstatus
     
   payment.api:
-    image: eshop/payment.api
+    image: bliztafree/payment.api
     depends_on:
       - rabbitmq         
 
   locations.api:
-    image: eshop/locations.api
+    image: bliztafree/locations.api
     depends_on:
       - nosql.data
       - rabbitmq

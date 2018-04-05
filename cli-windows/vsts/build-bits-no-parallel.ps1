@@ -35,22 +35,22 @@ $projectPaths | foreach {
     }
 
 ########################################################################################
-# Delete old eShop Docker images
+# Delete old bliztafree Docker images
 ########################################################################################
 
-$imagesToDelete = docker images --filter=reference="eshop/*" -q
+$imagesToDelete = docker images --filter=reference="bliztafree/*" -q
 
-If (-Not $imagesToDelete) {Write-Host "Not deleting eShop images as there are no eShop images in the current local Docker repo."} 
+If (-Not $imagesToDelete) {Write-Host "Not deleting bliztafree images as there are no bliztafree images in the current local Docker repo."} 
 Else 
 {
     # Delete all containers
     Write-Host "Deleting all containers in local Docker Host"
     docker rm $(docker ps -a -q) -f
     
-    # Delete all eshop images
-    Write-Host "Deleting eShop images in local Docker repo"
+    # Delete all bliztafree images
+    Write-Host "Deleting bliztafree images in local Docker repo"
     Write-Host $imagesToDelete
-    docker rmi $(docker images --filter=reference="eshop/*" -q) -f
+    docker rmi $(docker images --filter=reference="bliztafree/*" -q) -f
 }
 
 # WE DON'T NEED DOCKER BUILD AS WE CAN RUN "DOCKER-COMPOSE BUILD" OR "DOCKER-COMPOSE UP" AND IT WILL BUILD ALL THE IMAGES IN THE .YML FOR US

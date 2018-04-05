@@ -27,7 +27,7 @@ or using AKS instead of ACS
 1. Run `deploy.ps1` with your registry information. The Docker username and password are provided by Azure Container Registry, and can be retrieved from the Azure portal. Optionally, ACR credentials can be obtained by running the following command:
 
 >```
->az acr credential show -n eshopregistry
+>az acr credential show -n bliztafreeregistry
 >```
 
 Once the user and password are retrieved, run the following script for deployment. For example:
@@ -62,7 +62,7 @@ The script accepts following parameters:
 + `buildBits`: means that the source code of bliztafree will be built. If you have built your code (and have all projects published in `obj/Docker/publish`) do not pass this parameter. Default value is `false`
 + `buildImages`: If `true` (default value) Docker images are built and pushed in the Docker registry. If you set this parameter to `false`, Docker images won't be built nor pushed in the Docker registry (but k8s' deployments and services will be redeployed).
 + `deployInfrastructure`: If `true` infrastructure containers (rabbitmq, mongo, redis, sql) will be deployed in k8s. If `false` those containers (and its related deployments and services in k8s) won't be deployed.
-+ `dockerOrg`: Name of the organization in the registry where the images are (or will be pushed). Default value is `eshop` (which has images provided by Microsoft)
++ `dockerOrg`: Name of the organization in the registry where the images are (or will be pushed). Default value is `bliztafree` (which has images provided by Microsoft)
 
 **Important:** If you **don't pass the `-buildBits $true` the script won't build and publish the projects** to their `obj/Docker/publish` folder. If any project is not published, you'll be receiving errors like:
 

@@ -15,14 +15,14 @@
     <EntryPoint>
       <!-- Follow this link for more information about deploying Windows containers to Service Fabric: https://aka.ms/sfguestcontainers -->
       <ContainerHost>
-        <ImageName>eshop/payment.api-win:#{tag}#</ImageName>
+        <ImageName>bliztafree/payment.api-win:#{tag}#</ImageName>
       </ContainerHost>
     </EntryPoint>
     <!-- Pass environment variables to your container: -->
     <EnvironmentVariables>
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="Development"/>
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:80"/>
-      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.eshoponservicefabricbus"/>
+      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.bliztafreeonservicefabricbus"/>
       <EnvironmentVariable Name="AzureServiceBusEnabled" Value="False"/>      
       <EnvironmentVariable Name="EventBusUserName" Value="admin"/>
       <EnvironmentVariable Name="EventBusPassword" Value="password"/>
@@ -40,7 +40,7 @@
       <!-- This endpoint is used by the communication listener to obtain the port on which to 
            listen. Please note that if your service is partitioned, this port is shared with 
            replicas of different partitions that are placed in your code. -->
-      <Endpoint Name="PaymentApiTypeEndpoint" Port="5108" PathSuffix="eShopOnServiceFabric/PaymentApi"/>
+      <Endpoint Name="PaymentApiTypeEndpoint" Port="5108" PathSuffix="bliztafreeOnServiceFabric/PaymentApi"/>
     </Endpoints>
   </Resources>
 </ServiceManifest>

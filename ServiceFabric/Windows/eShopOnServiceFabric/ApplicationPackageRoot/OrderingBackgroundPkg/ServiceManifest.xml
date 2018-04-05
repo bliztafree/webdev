@@ -15,15 +15,15 @@
     <EntryPoint>
       <!-- Follow this link for more information about deploying Windows containers to Service Fabric: https://aka.ms/sfguestcontainers -->
       <ContainerHost>
-        <ImageName>eshop/ordering.backgroundtasks-win</ImageName>
+        <ImageName>bliztafree/ordering.backgroundtasks-win</ImageName>
       </ContainerHost>
     </EntryPoint>
     <!-- Pass environment variables to your container: -->
     <EnvironmentVariables>
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="Development"/>
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:80"/>
-      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.eshoponservicefabricsql,5433;Database=Microsoft.bliztafree.Services.OrderingDb;User Id=sa;Password=Pass@word"/>
-      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.eshoponservicefabricbus"/>
+      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.bliztafreeonservicefabricsql,5433;Database=Microsoft.bliztafree.Services.OrderingDb;User Id=sa;Password=Pass@word"/>
+      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.bliztafreeonservicefabricbus"/>
       <EnvironmentVariable Name="AzureServiceBusEnabled" Value="False"/>
       <EnvironmentVariable Name="GracePeriodTime" Value="1"/>
       <EnvironmentVariable Name="CheckUpdateTime" Value="30000"/>
@@ -44,7 +44,7 @@
       <!-- This endpoint is used by the communication listener to obtain the port on which to 
            listen. Please note that if your service is partitioned, this port is shared with 
            replicas of different partitions that are placed in your code. -->
-      <Endpoint Name="OrderingBackgroundTasksTypeEndpoint" Port="5111" UriScheme="http" PathSuffix="eShopOnServiceFabric/OrderingBackgroundTasks"/>
+      <Endpoint Name="OrderingBackgroundTasksTypeEndpoint" Port="5111" UriScheme="http" PathSuffix="bliztafreeOnServiceFabric/OrderingBackgroundTasks"/>
     </Endpoints>
   </Resources>
 </ServiceManifest>

@@ -7,12 +7,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: basket
     spec:
       containers:
       - name: basket
-        image: eshop/basket.api
+        image: bliztafree/basket.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -77,12 +77,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: catalog
     spec:
       containers:
       - name: catalog
-        image: eshop/catalog.api
+        image: bliztafree/catalog.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -142,12 +142,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: identity
     spec:
       containers:
       - name: identity
-        image: eshop/identity.api
+        image: bliztafree/identity.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -229,12 +229,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: ordering
     spec:
       containers:
       - name: ordering
-        image: eshop/ordering.api
+        image: bliztafree/ordering.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -299,12 +299,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: orderingbackground
     spec:
       containers:
       - name: orderingbackground
-        image: eshop/ordering.backgroundtasks
+        image: bliztafree/ordering.backgroundtasks
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -374,12 +374,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: locations
     spec:
       containers:
       - name: locations
-        image: eshop/locations.api
+        image: bliztafree/locations.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -454,12 +454,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: marketing
     spec:
       containers:
       - name: marketing
-        image: eshop/marketing.api
+        image: bliztafree/marketing.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -544,12 +544,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: payment
     spec:
       containers:
       - name: payment
-        image: eshop/payment.api
+        image: bliztafree/payment.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -599,12 +599,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: webmvc
     spec:
       containers:
       - name: webmvc
-        image: eshop/webmvc
+        image: bliztafree/webmvc
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -721,12 +721,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: webstatus
     spec:
       containers:
       - name: webstatus
-        image: eshop/webstatus
+        image: bliztafree/webstatus
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -797,12 +797,12 @@ spec:
   template:
     metadata:
       labels:
-        app: eshop
+        app: bliztafree
         component: webspa
     spec:
       containers:
       - name: webspa
-        image: eshop/webspa
+        image: bliztafree/webspa
         imagePullPolicy: Always
         env:
         - name: ASPNETCORE_URLS

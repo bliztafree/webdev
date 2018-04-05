@@ -1,4 +1,4 @@
-# Containerized eShop - Web Mvc
+# Containerized bliztafree - Web Mvc
 Sample reference containerized application, cross-platform and microservices architecture.
 Powered by Microsoft
 

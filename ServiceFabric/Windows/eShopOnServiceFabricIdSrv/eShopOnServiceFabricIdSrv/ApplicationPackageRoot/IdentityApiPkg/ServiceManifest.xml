@@ -15,7 +15,7 @@
     <EntryPoint>
       <!-- Follow this link for more information about deploying Windows containers to Service Fabric: https://aka.ms/sfguestcontainers -->
       <ContainerHost>
-        <ImageName>eshop/identity.api-win:#{tag}#</ImageName>
+        <ImageName>bliztafree/identity.api-win:#{tag}#</ImageName>
       </ContainerHost>
     </EntryPoint>
     <!-- Pass environment variables to your container: -->
@@ -25,7 +25,7 @@
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:80"/>
       <EnvironmentVariable Name="SpaClient" Value=""/>
       <EnvironmentVariable Name="XamarinCallback" Value=""/>
-      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.eshoponservicefabricsql,5433;Database=Microsoft.bliztafree.Service.IdentityDb;User Id=sa;Password=Pass@word"/>
+      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.bliztafreeonservicefabricsql,5433;Database=Microsoft.bliztafree.Service.IdentityDb;User Id=sa;Password=Pass@word"/>
       <EnvironmentVariable Name="MvcClient" Value=""/>
       <EnvironmentVariable Name="LocationApiClient" Value=""/>
       <EnvironmentVariable Name="MarketingApiClient" Value=""/>

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using bliztafree.WebSPA;
 
-namespace eShopConContainers.WebSPA.Server.Controllers
+namespace bliztafreeConContainers.WebSPA.Server.Controllers
 {
     public class HomeController : Controller
     {

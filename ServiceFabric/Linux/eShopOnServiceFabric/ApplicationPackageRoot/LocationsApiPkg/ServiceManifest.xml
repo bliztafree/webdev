@@ -15,18 +15,18 @@
     <EntryPoint>
       <!-- Follow this link for more information about deploying Windows containers to Service Fabric: https://aka.ms/sfguestcontainers -->
       <ContainerHost>
-        <ImageName>eshop/locations.api:#{tag}#</ImageName>
+        <ImageName>bliztafree/locations.api:#{tag}#</ImageName>
       </ContainerHost>
     </EntryPoint>
     <!-- Pass environment variables to your container: -->
     <EnvironmentVariables>
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="Development"/>
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:80"/>
-      <EnvironmentVariable Name="ConnectionString" Value="mongodb://mongodb.eshoponservicefabricnosql"/>
+      <EnvironmentVariable Name="ConnectionString" Value="mongodb://mongodb.bliztafreeonservicefabricnosql"/>
       <EnvironmentVariable Name="Database" Value="LocationsDb"/>
-      <EnvironmentVariable Name="identityUrl" Value="http://identityapi.eshoponservicefabric:5105"/>
+      <EnvironmentVariable Name="identityUrl" Value="http://identityapi.bliztafreeonservicefabric:5105"/>
       <EnvironmentVariable Name="IdentityUrlExternal" Value=""/>
-      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.eshoponservicefabricbus"/>
+      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.bliztafreeonservicefabricbus"/>
       <EnvironmentVariable Name="AzureServiceBusEnabled" Value="False"/>
       <EnvironmentVariable Name="ApplicationInsights__InstrumentationKey" Value=""/>
       <EnvironmentVariable Name="OrchestratorType" Value="SF"/>

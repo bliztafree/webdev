@@ -1,4 +1,4 @@
-# eShop Web SPA (Single Page Application)
+# bliztafree Web SPA (Single Page Application)
 
 ## Requirements and set up
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ApplicationManifest ApplicationTypeName="eShopOnServiceFabricType"
+<ApplicationManifest ApplicationTypeName="bliztafreeOnServiceFabricType"
                      ApplicationTypeVersion="1.0.0"
                      xmlns="http://schemas.microsoft.com/2011/01/fabric"
                      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -118,32 +118,32 @@
       </StatelessService>
     </Service>
    
-    <Service Name="MarketingApi" ServiceDnsName="marketingapi.eshoponservicefabric" ServicePackageActivationMode="ExclusiveProcess">
+    <Service Name="MarketingApi" ServiceDnsName="marketingapi.bliztafreeonservicefabric" ServicePackageActivationMode="ExclusiveProcess">
       <StatelessService ServiceTypeName="MarketingApiType" InstanceCount="[MarketingApi_InstanceCount]">
         <SingletonPartition />
       </StatelessService>
     </Service>
-    <Service Name="LocationsApi" ServiceDnsName="locationsapi.eshoponservicefabric" ServicePackageActivationMode="ExclusiveProcess">
+    <Service Name="LocationsApi" ServiceDnsName="locationsapi.bliztafreeonservicefabric" ServicePackageActivationMode="ExclusiveProcess">
       <StatelessService ServiceTypeName="LocationsApiType" InstanceCount="[LocationsApi_InstanceCount]">
         <SingletonPartition />
       </StatelessService>
     </Service>
-    <Service Name="PaymentApi" ServiceDnsName="paymentapi.eshoponservicefabric" ServicePackageActivationMode="ExclusiveProcess">
+    <Service Name="PaymentApi" ServiceDnsName="paymentapi.bliztafreeonservicefabric" ServicePackageActivationMode="ExclusiveProcess">
       <StatelessService ServiceTypeName="PaymentApiType" InstanceCount="[PaymentApi_InstanceCount]">
         <SingletonPartition />
       </StatelessService>
     </Service>    
-    <Service Name="OrderingApi" ServiceDnsName="orderingapi.eshoponservicefabric" ServicePackageActivationMode="ExclusiveProcess">
+    <Service Name="OrderingApi" ServiceDnsName="orderingapi.bliztafreeonservicefabric" ServicePackageActivationMode="ExclusiveProcess">
       <StatelessService ServiceTypeName="OrderingApiType" InstanceCount="[OrderingApi_InstanceCount]">
         <SingletonPartition />
       </StatelessService>
     </Service>
-    <Service Name="CatalogApi" ServiceDnsName="catalogapi.eshoponservicefabric" ServicePackageActivationMode="ExclusiveProcess">
+    <Service Name="CatalogApi" ServiceDnsName="catalogapi.bliztafreeonservicefabric" ServicePackageActivationMode="ExclusiveProcess">
       <StatelessService ServiceTypeName="CatalogApiType" InstanceCount="[CatalogApi_InstanceCount]">
         <SingletonPartition />
       </StatelessService>
     </Service>
-    <Service Name="BasketApi" ServiceDnsName="basketapi.eshoponservicefabric" ServicePackageActivationMode="ExclusiveProcess">
+    <Service Name="BasketApi" ServiceDnsName="basketapi.bliztafreeonservicefabric" ServicePackageActivationMode="ExclusiveProcess">
       <StatelessService ServiceTypeName="BasketApiType" InstanceCount="[BasketApi_InstanceCount]">
         <SingletonPartition />
       </StatelessService>

@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: externalcfg
   labels:
-    app: eshop  
+    app: bliztafree  
 data:
   BasketBus: rabbitmq
   BasketRedisConStr: basket-data

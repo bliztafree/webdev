@@ -1,7 +1,7 @@
 {
-  "newStorageAccountName": { "value": "eshopsrvmvstoragewin" },
-  "adminUsername": { "value": "eshop" },
+  "newStorageAccountName": { "value": "bliztafreesrvmvstoragewin" },
+  "adminUsername": { "value": "bliztafree" },
   "adminPassword": { "value": "Pass@word" },
-  "dnsNameForPublicIP": { "value": "eshop-srv-win" },
-  "VMName": {"value": "eshop-srv-win"}
+  "dnsNameForPublicIP": { "value": "bliztafree-srv-win" },
+  "VMName": {"value": "bliztafree-srv-win"}
 }

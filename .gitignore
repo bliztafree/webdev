@@ -256,7 +256,7 @@ pub/
 /src/Services/Identity/bliztafree.Identity/Properties/launchSettings.json
 
 #Ignore marker-file used to know which docker files we have.
-.eshopdocker_*
+.bliztafreedocker_*
 /src/Web/WebMVC/wwwroot/lib
 /src/Web/WebMVC/wwwroot/css/site.min.css
 **/.kube/**

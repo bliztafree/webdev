@@ -9,7 +9,7 @@ Param(
     [parameter(Mandatory=$false)][bool]$deployCI=$false,
     [parameter(Mandatory=$false)][bool]$buildImages=$true,
     [parameter(Mandatory=$false)][bool]$deployInfrastructure=$true,
-    [parameter(Mandatory=$false)][string]$dockerOrg="eshop"
+    [parameter(Mandatory=$false)][string]$dockerOrg="bliztafree"
 )
 
 function ExecKube($cmd) {    
@@ -69,7 +69,7 @@ if ($buildImages) {
 
     foreach ($service in $services) {
         $imageFqdn = if ($useDockerHub)  {"$dockerOrg/${service}"} else {"$registry/$dockerOrg/${service}"}
-        docker tag eshop/${service}:$imageTag ${imageFqdn}:$imageTag
+        docker tag bliztafree/${service}:$imageTag ${imageFqdn}:$imageTag
         docker push ${imageFqdn}:$imageTag            
     }
 }
@@ -151,7 +151,7 @@ ExecKube -cmd 'create configmap urls `
     --from-literal=PaymentHealthCheckUrl=http://payment/hc'
 	
 
-ExecKube -cmd 'label configmap urls app=eshop'
+ExecKube -cmd 'label configmap urls app=bliztafree'
 
 Write-Host "Deploying configuration from $configFile" -ForegroundColor Yellow
 

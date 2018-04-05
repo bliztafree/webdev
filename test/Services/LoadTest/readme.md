@@ -43,13 +43,13 @@ Modify the **app.config** file in the LoadTest project directory and set the fol
   </Servers>
 ```
 
-Modify the **ServiceManifest.xml** files of the eShop SF Services and set the **UseLoadTest** environment variable to True. This setting enables the load tests to bypass authorization in api services.
+Modify the **ServiceManifest.xml** files of the bliztafree SF Services and set the **UseLoadTest** environment variable to True. This setting enables the load tests to bypass authorization in api services.
 
 <p>
 <img src="../../../img/loadtests/sfmanifestsettings.png">
 <p>
 
-Deploy the SF services. **PLEASE** Read our [SF deployment guide for Linux](./../../../deploy/az/servicefabric/LinuxContainers/readme.md) And [SF deployment guide for Windows](./../../../deploy/az/servicefabric/WindowsContainers/readme.md) to know about how to deploy eshop on SF.
+Deploy the SF services. **PLEASE** Read our [SF deployment guide for Linux](./../../../deploy/az/servicefabric/LinuxContainers/readme.md) And [SF deployment guide for Windows](./../../../deploy/az/servicefabric/WindowsContainers/readme.md) to know about how to deploy bliztafree on SF.
 
 ## Set a Kubernetes environment
 
@@ -73,7 +73,7 @@ Modify the **conf_local.yml** file in the K8s directory and set the **EnableLoad
 <img src="../../../img/loadtests/k8ssettings.png">
 <p>
 
-Deploy the kubernetes services. **PLEASE** Read our [k8s deployment guide](./../../../k8s/README.k8s.md) to know about how to deploy eshop on Kubernetes.
+Deploy the kubernetes services. **PLEASE** Read our [k8s deployment guide](./../../../k8s/README.k8s.md) to know about how to deploy bliztafree on Kubernetes.
 
 ## Run Load Tests
 

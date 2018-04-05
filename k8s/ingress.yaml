@@ -2,9 +2,9 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   labels:
-    app: eshop
+    app: bliztafree
     component: frontend
-  name: eshop-ingress
+  name: bliztafree-ingress
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"  
 spec:

@@ -15,17 +15,17 @@
     <EntryPoint>
       <!-- Follow this link for more information about deploying Windows containers to Service Fabric: https://aka.ms/sfguestcontainers -->
       <ContainerHost>
-        <ImageName>eshop/ordering.api-win:#{tag}#</ImageName>
+        <ImageName>bliztafree/ordering.api-win:#{tag}#</ImageName>
       </ContainerHost>
     </EntryPoint>
     <!-- Pass environment variables to your container: -->
     <EnvironmentVariables>
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="Development"/>
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:80"/>
-      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.eshoponservicefabricsql,5433;Database=Microsoft.bliztafree.Services.OrderingDb;User Id=sa;Password=Pass@word"/>
-      <EnvironmentVariable Name="identityUrl" Value="http://identityapi.eshoponservicefabric:5105"/>
+      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.bliztafreeonservicefabricsql,5433;Database=Microsoft.bliztafree.Services.OrderingDb;User Id=sa;Password=Pass@word"/>
+      <EnvironmentVariable Name="identityUrl" Value="http://identityapi.bliztafreeonservicefabric:5105"/>
       <EnvironmentVariable Name="IdentityUrlExternal" Value=""/>
-      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.eshoponservicefabricbus"/>
+      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.bliztafreeonservicefabricbus"/>
       <EnvironmentVariable Name="AzureServiceBusEnabled" Value="False"/>
       <EnvironmentVariable Name="UseCustomizationData" Value="True"/>
       <EnvironmentVariable Name="EventBusUserName" Value="admin"/>
@@ -45,7 +45,7 @@
       <!-- This endpoint is used by the communication listener to obtain the port on which to 
            listen. Please note that if your service is partitioned, this port is shared with 
            replicas of different partitions that are placed in your code. -->
-      <Endpoint Name="OrderingApiTypeEndpoint" Port="5102" UriScheme="http" PathSuffix="eShopOnServiceFabric/OrderingApi"/>
+      <Endpoint Name="OrderingApiTypeEndpoint" Port="5102" UriScheme="http" PathSuffix="bliztafreeOnServiceFabric/OrderingApi"/>
     </Endpoints>
   </Resources>
 </ServiceManifest>

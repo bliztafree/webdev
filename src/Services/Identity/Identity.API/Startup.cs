@@ -58,7 +58,7 @@ namespace Microsoft.bliztafree.Services.Identity.API
             {
                 services.AddDataProtection(opts =>
                 {
-                    opts.ApplicationDiscriminator = "eshop.identity";
+                    opts.ApplicationDiscriminator = "bliztafree.identity";
                 })
                 .PersistKeysToRedis(ConnectionMultiplexer.Connect(Configuration["DPConnectionString"]), "DataProtection-Keys");
             }

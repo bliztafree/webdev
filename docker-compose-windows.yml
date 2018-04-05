@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   basket.api:
-    image: eshop/basket.api-win:${TAG:-latest}
+    image: bliztafree/basket.api-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Basket/Basket.API/Dockerfile
@@ -12,7 +12,7 @@ services:
       - rabbitmq
 
   catalog.api:
-    image: eshop/catalog.api-win:${TAG:-latest}
+    image: bliztafree/catalog.api-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Catalog/Catalog.API/Dockerfile
@@ -21,7 +21,7 @@ services:
       - rabbitmq
 
   identity.api:
-    image: eshop/identity.api-win:${TAG:-latest}
+    image: bliztafree/identity.api-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Identity/Identity.API/Dockerfile
@@ -29,7 +29,7 @@ services:
       - sql.data
 
   ordering.api:
-    image: eshop/ordering.api-win:${TAG:-latest}
+    image: bliztafree/ordering.api-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Ordering/Ordering.API/Dockerfile
@@ -38,7 +38,7 @@ services:
       - rabbitmq
 
   ordering.backgroundtasks:
-    image: eshop/ordering.backgroundtasks-win:${TAG:-latest}
+    image: bliztafree/ordering.backgroundtasks-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Ordering/Ordering.BackgroundTasks/Dockerfile    
@@ -47,7 +47,7 @@ services:
       - rabbitmq
 
   marketing.api:
-    image: eshop/marketing.api-win:${TAG:-latest}
+    image: bliztafree/marketing.api-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Marketing/Marketing.API/Dockerfile    
@@ -58,7 +58,7 @@ services:
       - rabbitmq
 
   webspa:
-    image: eshop/webspa-win:${TAG:-latest}
+    image: bliztafree/webspa-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Web/WebSPA/Dockerfile
@@ -70,7 +70,7 @@ services:
       - marketing.api
 
   webmvc:
-    image: eshop/webmvc-win:${TAG:-latest}
+    image: bliztafree/webmvc-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Web/WebMVC/Dockerfile
@@ -82,13 +82,13 @@ services:
       - marketing.api
   
   webstatus:
-    image: eshop/webstatus-win:${TAG:-latest}
+    image: bliztafree/webstatus-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Web/WebStatus/Dockerfile
 
   payment.api:
-    image: eshop/payment.api-win:${TAG:-latest}
+    image: bliztafree/payment.api-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Payment/Payment.API/Dockerfile
@@ -96,7 +96,7 @@ services:
       - rabbitmq
 
   locations.api:
-    image: eshop/locations.api-win:${TAG:-latest}
+    image: bliztafree/locations.api-win:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Location/Locations.API/Dockerfile

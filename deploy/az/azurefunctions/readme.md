@@ -6,7 +6,7 @@ The ARM template `azurefunctionsdeploy.json` and its parameter file (`azurefunct
 
 You can edit the `azurefunctionsdeploy.parameters.parameters.json` file to set your values, but is not needed. The only parameter that can be set is:
 
-1. `SitesEshopfunctionsName` is a string that is used to create the Azure function app name. 
+1. `SitesbliztafreefunctionsName` is a string that is used to create the Azure function app name. 
 
 ## Deploy the template
 
@@ -27,7 +27,7 @@ Once deployed, go to azure portal and set the connection string for the azure fu
 
 Example:  
 
-"SqlConnection": "Server=tcp:eshopsql.database.windows.net,1433;Initial Catalog=marketingdb;"
+"SqlConnection": "Server=tcp:bliztafreesql.database.windows.net,1433;Initial Catalog=marketingdb;"
 
 In appsettings section, add a new entry named "MarketingStorageUri". The value must be the uri of the blob storage where the campaign images are stored.
 

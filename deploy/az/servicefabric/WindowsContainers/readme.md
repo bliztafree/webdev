@@ -22,7 +22,7 @@ Edit the following params in `servicefabricdeploy.parameters.json` file to set y
 - adminPassword: user-password for VMs administration
 - dnsName: Name assigned to your SF dns
 
-Optionally, you could modify which ports are opened in the LoadBalancer for the multiple eShopOnContainer apps and API services.
+Optionally, you could modify which ports are opened in the LoadBalancer for the multiple bliztafreeOnContainer apps and API services.
 By default, they are setup as:
 - webMvcHttpPort:       5100
 - webSpaHttpPort:       5104
@@ -40,7 +40,7 @@ Once parameter file is edited you can deploy it using [create-resources script](
 
 For example, to deploy the cluster to a new resourcegroup located in westus, using the Command Prompt, go to `deploy\az` folder and type:
 ```
-create-resources.cmd servicefabric\WindowsContainers\servicefabricdeploy qa-eshop-sfwin-resgrp -c westus
+create-resources.cmd servicefabric\WindowsContainers\servicefabricdeploy qa-bliztafree-sfwin-resgrp -c westus
 ```
 
 You should see a similar execution to the following:
@@ -102,10 +102,10 @@ Also, install the same certificate as CA (Certificate Authority) under Current U
 
 Edit the parameters in `servicefabricdeploysecured.parameters.json` in a similar way you can do with the unsecured .json file shown above (clusterName, dnsName, etc.), plus edit the following values:
 
-- sourceVaultValue: Your Azure Keyvault's RESOURCE ID (check Azure keyvault properties, similar to: /subscriptions/e1234ac1-c09c-3jaf-6767-98b3c5f1f246/resourceGroups/eshop-global-resgrp/providers/Microsoft.KeyVault/vaults/eshopkeyvault")
+- sourceVaultValue: Your Azure Keyvault's RESOURCE ID (check Azure keyvault properties, similar to: /subscriptions/e1234ac1-c09c-3jaf-6767-98b3c5f1f246/resourceGroups/bliztafree-global-resgrp/providers/Microsoft.KeyVault/vaults/bliztafreekeyvault")
 
 - certificateUrlValue: Your certificate Secret Identifier (check Azure Keyvault secret certificate properties, should be in the format of https://<name of the vault>.vault.azure.net:443/secrets/<exact location>, similar to: 
-https://eshopkeyvault.vault.azure.net/secrets/pro-eshop-sfwin-cluster-cert/w647684642cGE2sj83b3hfe4h8e08963)
+https://bliztafreekeyvault.vault.azure.net/secrets/pro-bliztafree-sfwin-cluster-cert/w647684642cGE2sj83b3hfe4h8e08963)
 
 - certificateThumbprint: certificate thumbprint (check azure Keyvault certificate thumbprint, something like 88JK453486D55A6818573G0DW9100365HDK70HDK)
 
@@ -116,7 +116,7 @@ Once parameters file is edited you can deploy it using [create-resources script]
 Use a command prompt window positioned into the deploy\az folder.
 
 ```
-create-resources.cmd servicefabric\WindowsContainers\servicefabricdeploysecured pro-eshop-sfwin-resgrp -c westus
+create-resources.cmd servicefabric\WindowsContainers\servicefabricdeploysecured pro-bliztafree-sfwin-resgrp -c westus
 ```
 The execution should be something like the following:
 
@@ -128,9 +128,9 @@ Once the cluster is created you can explore it with Azure's portal, like in the 
 In this case, the ARM template is creating a 5 node cluster when creating a SECURE cluster for "production".
 
 
-# Deploy eShopOnServiceFabric with Visual Studio.
+# Deploy bliztafreeOnServiceFabric with Visual Studio.
 
-Modify the cloud.xml file of each Service Fabric application in PublishProfile directory and set  your certificate settings to be able to deploy eshopOnContainers in the secured cluster:
+Modify the cloud.xml file of each Service Fabric application in PublishProfile directory and set  your certificate settings to be able to deploy bliztafreeOnContainers in the secured cluster:
 
 <img src="../../../../img/sf/cloud_publishProfile.PNG">
 

@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "clusterName": {
-            "value": "pro-eshop-sflinux-cluster"
+            "value": "pro-bliztafree-sflinux-cluster"
         },
         "clusterLocation": {
             "value": "westus"
@@ -12,28 +12,28 @@
             "value": "westus"
         },
         "adminUserName": {
-            "value": "eshop"
+            "value": "bliztafree"
         },
         "adminPassword": {
             "value": "Pass@word1"
         },
         "nicName": {
-            "value": "NIC-eshopsflinsec"
+            "value": "NIC-bliztafreesflinsec"
         },
         "publicIPAddressName": {
-            "value": "eshopsflinsec-PubIP"
+            "value": "bliztafreesflinsec-PubIP"
         },
         "dnsName": {
-            "value": "pro-eshop-sflinux-cluster"
+            "value": "pro-bliztafree-sflinux-cluster"
         },
         "virtualNetworkName": {
-            "value": "VNet-eshopsflin"
+            "value": "VNet-bliztafreesflin"
         },
         "lbName": {
-            "value": "LB-eshopsflin"
+            "value": "LB-bliztafreesflin"
         },
         "lbIPName": {
-            "value": "LBIP-eshopsflin"
+            "value": "LBIP-bliztafreesflin"
         },       
         "sourceVaultValue": {
             "value": "your-value-check-keyvault-at-azure"

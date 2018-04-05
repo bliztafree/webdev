@@ -45,7 +45,7 @@ namespace Microsoft.bliztafree.WebMVC
             {
                 services.AddDataProtection(opts =>
                 {
-                    opts.ApplicationDiscriminator = "eshop.webmvc";
+                    opts.ApplicationDiscriminator = "bliztafree.webmvc";
                 })
                 .PersistKeysToRedis(ConnectionMultiplexer.Connect(Configuration["DPConnectionString"]), "DataProtection-Keys");
             }

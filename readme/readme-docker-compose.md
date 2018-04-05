@@ -25,23 +25,23 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml
 
 When using this file the following environments variables must be set:
 
-* `ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP` with the IP or DNS name of the docker host that runs the services (can use `localhost` if needed). 
-* `ESHOP_AZURE_STORAGE_CATALOG` with the URL of the Azure Storage that will host the catalog images
-* `ESHOP_AZURE_STORAGE_MARKETING` with the URL of the Azure Storage that will host the marketing campaign images
+* `bliztafree_PROD_EXTERNAL_DNS_NAME_OR_IP` with the IP or DNS name of the docker host that runs the services (can use `localhost` if needed). 
+* `bliztafree_AZURE_STORAGE_CATALOG` with the URL of the Azure Storage that will host the catalog images
+* `bliztafree_AZURE_STORAGE_MARKETING` with the URL of the Azure Storage that will host the marketing campaign images
 
 You might wonder why an external image resource (storage) is needed when using `docker-compose.prod.yml` instead of `docker-compose.override.yml`. Answer to this is related to a limitation of Docker Compose file format. This is how we set the environment configuration of Catalog microservice in `docker-compose.override.yml`:
 
 ```
-PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG:-http://localhost:5101/api/v1/catalog/items/[0]/pic/}
+PicBaseUrl=${bliztafree_AZURE_STORAGE_CATALOG:-http://localhost:5101/api/v1/catalog/items/[0]/pic/}
 ```
 
-The `PicBaseUrl` variable is set to the value of `ESHOP_AZURE_STORAGE_CATALOG` if this variable is set to any value other than blank string. If not, the value is set to `http://localhost:5101/api/v1/catalog/items/[0]/pic/`. That works perfectly in a local environment where you run all your services in `localhost` and setting `ESHOP_AZURE_STORAGE_CATALOG` you can use or not Azure Storage for the images (if you don't use Azure Storage images are served locally by catalog servide). But when you run the services in a external docker host, specified in `ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP`, the configuration should be as follows:
+The `PicBaseUrl` variable is set to the value of `bliztafree_AZURE_STORAGE_CATALOG` if this variable is set to any value other than blank string. If not, the value is set to `http://localhost:5101/api/v1/catalog/items/[0]/pic/`. That works perfectly in a local environment where you run all your services in `localhost` and setting `bliztafree_AZURE_STORAGE_CATALOG` you can use or not Azure Storage for the images (if you don't use Azure Storage images are served locally by catalog servide). But when you run the services in a external docker host, specified in `bliztafree_PROD_EXTERNAL_DNS_NAME_OR_IP`, the configuration should be as follows:
 
 ```
-PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG:-http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5101/api/v1/catalog/items/[0]/pic/}
+PicBaseUrl=${bliztafree_AZURE_STORAGE_CATALOG:-http://${bliztafree_PROD_EXTERNAL_DNS_NAME_OR_IP}:5101/api/v1/catalog/items/[0]/pic/}
 ```
 
-So, use `ESHOP_AZURE_STORAGE_CATALOG` if set, and if not use `http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5101/api/v1/catalog/items/[0]/pic/}`. Unfortunately seems that docker-compose do not substitute variables inside variables, so the value that `PicBaseUrl` gets if `ESHOP_AZURE_STORAGE_CATALOG` is not set is literally `http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5101/api/v1/catalog/items/[0]/pic/}` without any substitution.
+So, use `bliztafree_AZURE_STORAGE_CATALOG` if set, and if not use `http://${bliztafree_PROD_EXTERNAL_DNS_NAME_OR_IP}:5101/api/v1/catalog/items/[0]/pic/}`. Unfortunately seems that docker-compose do not substitute variables inside variables, so the value that `PicBaseUrl` gets if `bliztafree_AZURE_STORAGE_CATALOG` is not set is literally `http://${bliztafree_PROD_EXTERNAL_DNS_NAME_OR_IP}:5101/api/v1/catalog/items/[0]/pic/}` without any substitution.
 
 ## Build container (DEPRECATED)
 

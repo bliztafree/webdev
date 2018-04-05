@@ -15,15 +15,15 @@
     <EntryPoint>
       <!-- Follow this link for more information about deploying Windows containers to Service Fabric: https://aka.ms/sfguestcontainers -->
       <ContainerHost>
-        <ImageName>eshop/ordering.backgroundtasks</ImageName>
+        <ImageName>bliztafree/ordering.backgroundtasks</ImageName>
       </ContainerHost>
     </EntryPoint>
     <!-- Pass environment variables to your container: -->
     <EnvironmentVariables>
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="Development"/>
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:80"/>
-      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.eshoponservicefabricsql,5433;Database=Microsoft.bliztafree.Services.OrderingDb;User Id=sa;Password=Pass@word"/>
-      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.eshoponservicefabricbus"/>
+      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.bliztafreeonservicefabricsql,5433;Database=Microsoft.bliztafree.Services.OrderingDb;User Id=sa;Password=Pass@word"/>
+      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.bliztafreeonservicefabricbus"/>
       <EnvironmentVariable Name="AzureServiceBusEnabled" Value="False"/>
       <EnvironmentVariable Name="GracePeriodTime" Value="1"/>
       <EnvironmentVariable Name="CheckUpdateTime" Value="30000"/>

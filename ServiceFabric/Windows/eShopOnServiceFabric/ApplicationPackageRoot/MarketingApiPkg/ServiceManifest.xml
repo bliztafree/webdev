@@ -15,16 +15,16 @@
     <EntryPoint>
       <!-- Follow this link for more information about deploying Windows containers to Service Fabric: https://aka.ms/sfguestcontainers -->
       <ContainerHost>
-        <ImageName>eshop/marketing.api-win:#{tag}#</ImageName>
+        <ImageName>bliztafree/marketing.api-win:#{tag}#</ImageName>
       </ContainerHost>
     </EntryPoint>
     <!-- Pass environment variables to your container: -->
     <EnvironmentVariables>
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="Development"/>
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:80"/>
-      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.eshoponservicefabricsql,5433;Database=Microsoft.bliztafree.Services.MarketingDb;User Id=sa;Password=Pass@word"/>
+      <EnvironmentVariable Name="ConnectionString" Value="Data Source=sqlserver.bliztafreeonservicefabricsql,5433;Database=Microsoft.bliztafree.Services.MarketingDb;User Id=sa;Password=Pass@word"/>
       <EnvironmentVariable Name="IdentityUrlExternal" Value=""/>
-      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.eshoponservicefabricbus"/>
+      <EnvironmentVariable Name="EventBusConnection" Value="rabbitmq.bliztafreeonservicefabricbus"/>
       <EnvironmentVariable Name="AzureServiceBusEnabled" Value="False"/>
       <EnvironmentVariable Name="CampaignDetailFunctionUri" Value=""/>
       <EnvironmentVariable Name="PicBaseUrl" Value=""/>
@@ -33,9 +33,9 @@
       <EnvironmentVariable Name="AzureStorageEnabled" Value="False"/>
       <EnvironmentVariable Name="EventBusUserName" Value="admin"/>
       <EnvironmentVariable Name="EventBusPassword" Value="password"/>
-      <EnvironmentVariable Name="MongoConnectionString" Value="mongodb://mongodb.eshoponservicefabricnosql"/>
+      <EnvironmentVariable Name="MongoConnectionString" Value="mongodb://mongodb.bliztafreeonservicefabricnosql"/>
       <EnvironmentVariable Name="MongoDatabase" Value="MarketingDb"/>
-      <EnvironmentVariable Name="identityUrl" Value="http://identityapi.eshoponservicefabric:5105"/>
+      <EnvironmentVariable Name="identityUrl" Value="http://identityapi.bliztafreeonservicefabric:5105"/>
       <EnvironmentVariable Name="ApplicationInsights:InstrumentationKey" Value=""/>
       <EnvironmentVariable Name="OrchestratorType" Value="SF"/>
       <EnvironmentVariable Name="UseLoadTest" Value="False"/>
@@ -51,7 +51,7 @@
       <!-- This endpoint is used by the communication listener to obtain the port on which to 
            listen. Please note that if your service is partitioned, this port is shared with 
            replicas of different partitions that are placed in your code. -->
-      <Endpoint Name="MarketingApiTypeEndpoint" Port="5110" PathSuffix="eShopOnServiceFabric/MarketingApi"/>
+      <Endpoint Name="MarketingApiTypeEndpoint" Port="5110" PathSuffix="bliztafreeOnServiceFabric/MarketingApi"/>
     </Endpoints>
   </Resources>
 </ServiceManifest>

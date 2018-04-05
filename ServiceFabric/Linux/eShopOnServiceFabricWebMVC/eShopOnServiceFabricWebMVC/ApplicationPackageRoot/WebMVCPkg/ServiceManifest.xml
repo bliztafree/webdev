@@ -15,25 +15,25 @@
     <EntryPoint>
       <!-- Follow this link for more information about deploying Windows containers to Service Fabric: https://aka.ms/sfguestcontainers -->
       <ContainerHost>
-        <ImageName>eshop/webmvc:#{tag}#</ImageName>
+        <ImageName>bliztafree/webmvc:#{tag}#</ImageName>
       </ContainerHost>
     </EntryPoint>
     <!-- Pass environment variables to your container: -->
     <EnvironmentVariables>
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="Development"/>
       <EnvironmentVariable Name="ASPNETCORE_URLS" Value="http://0.0.0.0:80"/>
-      <EnvironmentVariable Name="CatalogUrl" Value="http://catalogapi.eshoponservicefabric:5101"/>
-      <EnvironmentVariable Name="OrderingUrl" Value="http://orderingapi.eshoponservicefabric:5102"/>
-      <EnvironmentVariable Name="BasketUrl" Value="http://basketapi.eshoponservicefabric:5103"/>
+      <EnvironmentVariable Name="CatalogUrl" Value="http://catalogapi.bliztafreeonservicefabric:5101"/>
+      <EnvironmentVariable Name="OrderingUrl" Value="http://orderingapi.bliztafreeonservicefabric:5102"/>
+      <EnvironmentVariable Name="BasketUrl" Value="http://basketapi.bliztafreeonservicefabric:5103"/>
       <EnvironmentVariable Name="IdentityUrl" Value=""/>
-      <EnvironmentVariable Name="MarketingUrl" Value="http://marketingapi.eshoponservicefabric:5110"/>
-      <EnvironmentVariable Name="LocationsUrl" Value="http://locationsapi.eshoponservicefabric:5109"/>
-      <EnvironmentVariable Name="CatalogUrlHC" Value="http://catalogapi.eshoponservicefabric:5101/hc"/>
-      <EnvironmentVariable Name="OrderingUrlHC" Value="http://orderingapi.eshoponservicefabric:5102/hc"/>
-      <EnvironmentVariable Name="IdentityUrlHC" Value="http://identityapi.eshoponservicefabric:5105/hc"/>
-      <EnvironmentVariable Name="BasketUrlHC" Value="http://basketapi.eshoponservicefabric:5103/hc"/>
-      <EnvironmentVariable Name="PaymentUrlHC" Value="http://paymentapi.eshoponservicefabric:5108/hc"/>
-      <EnvironmentVariable Name="MarketingUrlHC" Value="http://marketingapi.eshoponservicefabric:5110/hc"/>
+      <EnvironmentVariable Name="MarketingUrl" Value="http://marketingapi.bliztafreeonservicefabric:5110"/>
+      <EnvironmentVariable Name="LocationsUrl" Value="http://locationsapi.bliztafreeonservicefabric:5109"/>
+      <EnvironmentVariable Name="CatalogUrlHC" Value="http://catalogapi.bliztafreeonservicefabric:5101/hc"/>
+      <EnvironmentVariable Name="OrderingUrlHC" Value="http://orderingapi.bliztafreeonservicefabric:5102/hc"/>
+      <EnvironmentVariable Name="IdentityUrlHC" Value="http://identityapi.bliztafreeonservicefabric:5105/hc"/>
+      <EnvironmentVariable Name="BasketUrlHC" Value="http://basketapi.bliztafreeonservicefabric:5103/hc"/>
+      <EnvironmentVariable Name="PaymentUrlHC" Value="http://paymentapi.bliztafreeonservicefabric:5108/hc"/>
+      <EnvironmentVariable Name="MarketingUrlHC" Value="http://marketingapi.bliztafreeonservicefabric:5110/hc"/>
       <EnvironmentVariable Name="ApplicationInsights__InstrumentationKey" Value=""/>
       <EnvironmentVariable Name="OrchestratorType" Value="SF"/>
       <EnvironmentVariable Name="UseLoadTest" Value="True"/>

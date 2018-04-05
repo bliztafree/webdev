@@ -6,7 +6,7 @@
             "value": "qa"
         },
         "clusterName": {
-            "value": "-eshop-sfwin-cluster"
+            "value": "-bliztafree-sfwin-cluster"
         },
         "clusterLocation": {
             "value": "westus"
@@ -21,28 +21,28 @@
             "value": "testedu1234!"
         },
         "nicName": {
-            "value": "NIC-eshopsfwin"
+            "value": "NIC-bliztafreesfwin"
         },
         "publicIPAddressName": {
-            "value": "eshopsfwin-PubIP"
+            "value": "bliztafreesfwin-PubIP"
         },
         "dnsName": {
-            "value": "testedu-eshop-sfwin-cluster"
+            "value": "testedu-bliztafree-sfwin-cluster"
         },
         "virtualNetworkName": {
-            "value": "VNet-eshopsfwin"
+            "value": "VNet-bliztafreesfwin"
         },
         "lbName": {
-            "value": "LB-eshopsfwin"
+            "value": "LB-bliztafreesfwin"
         },
         "lbIPName": {
-            "value": "LBIP-eshopsfwin"
+            "value": "LBIP-bliztafreesfwin"
         },
         "applicationDiagnosticsStorageAccountName": {
-            "value": "sfdiageshopw"
+            "value": "sfdiagbliztafreew"
         },
         "supportLogStorageAccountName": {
-            "value": "sflogeshopw"
+            "value": "sflogbliztafreew"
         },
         "vmImageSku": {
             "value": "2016-Datacenter-with-Containers"

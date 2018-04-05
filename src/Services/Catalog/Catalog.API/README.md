@@ -1,4 +1,4 @@
-# Containerized eShop - Catalog Service
+# Containerized bliztafree - Catalog Service
 Sample reference containerized application, cross-platform and microservices architecture.
 Powered by Microsoft
 

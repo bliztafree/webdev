@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "clusterName": {
-            "value": "qa-eshop-sflinux-cluster"
+            "value": "qa-bliztafree-sflinux-cluster"
         },
         "clusterLocation": {
             "value": "westus"
@@ -12,28 +12,28 @@
             "value": "westus"
         },
         "adminUserName": {
-            "value": "eshop"
+            "value": "bliztafree"
         },
         "adminPassword": {
             "value": "Your_complex_Pass@word1"
         },
         "nicName": {
-            "value": "NIC-eshoponsflin"
+            "value": "NIC-bliztafreeonsflin"
         },
         "publicIPAddressName": {
-            "value": "eshoponsflin-PubIP"
+            "value": "bliztafreeonsflin-PubIP"
         },
         "dnsName": {
-            "value": "qa-eshop-sflinux-cluster"
+            "value": "qa-bliztafree-sflinux-cluster"
         },
         "virtualNetworkName": {
-            "value": "VNet-eshoponsflin"
+            "value": "VNet-bliztafreeonsflin"
         },
         "lbName": {
-            "value": "LB-eshoponsflin"
+            "value": "LB-bliztafreeonsflin"
         },
         "lbIPName": {
-            "value": "LBIP-eshoponsflin"
+            "value": "LBIP-bliztafreeonsflin"
         },
         "vmImageSku": {
             "value": "16.04-LTS"

@@ -15,7 +15,7 @@ using System;
 using System.IO;
 using WebSPA.Infrastructure;
 
-namespace eShopConContainers.WebSPA
+namespace bliztafreeConContainers.WebSPA
 {
     public class Startup
     {
@@ -63,7 +63,7 @@ namespace eShopConContainers.WebSPA
             {
                 services.AddDataProtection(opts =>
                 {
-                    opts.ApplicationDiscriminator = "eshop.webspa";
+                    opts.ApplicationDiscriminator = "bliztafree.webspa";
                 })
                 .PersistKeysToRedis(ConnectionMultiplexer.Connect(Configuration["DPConnectionString"]), "DataProtection-Keys");
             }
